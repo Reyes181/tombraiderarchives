@@ -77,7 +77,7 @@ const ArchivePage = async ({ params }: {params: IParams}) => {
                                         src={archive?.icon}
                                         className="object-contain object-center h-auto w-auto"
                                     /> */}
-                                    <BlurImage name={archive ? archive.name : ''} mainImage={archive ? archive?.icon : ''} arch/>
+                                    <BlurImage name={archive ? archive?.name : ''} mainImage={archive ? archive?.icon : ''} arch/>
                                 </div>
                             </div>
                         </div>
@@ -125,7 +125,7 @@ const ArchivePage = async ({ params }: {params: IParams}) => {
                                         comic={comic}
                                         key={i}
                                     >
-                                        <BlurImage name={comic.name} mainImage={comic.cover} comic/>
+                                        <BlurImage name={comic?.name} mainImage={comic?.cover} comic/>
                                     </ComicCard>
                             ))}
                             </div>
@@ -156,7 +156,7 @@ const ArchivePage = async ({ params }: {params: IParams}) => {
                             <>
                             {arts?.map((art, i) => (
                                 <ArtCard art={art} key={i}>
-                                    <BlurImage name={art.artist} mainImage={art.illustration} comic/>
+                                    <BlurImage name={art?.artist} mainImage={art?.illustration} comic/>
                                 </ArtCard>
                             ))}
                             </> 
@@ -168,15 +168,15 @@ const ArchivePage = async ({ params }: {params: IParams}) => {
                 <Suspense fallback={<div className="h-100 md:h-64 lg:h-80 w-full animate-pulse bg-gray-200"/>}>
                     {
                         gallery?.map((g, i) =>(
-                            <div key={i} style={{backgroundImage: `url(${g.cover})`}} className={`bg-center bg-cover bg-no-repeat h-100 md:h-64 lg:h-80 w-full`}>
+                            <div key={i} style={{backgroundImage: `url(${g?.cover})`}} className={`bg-center bg-cover bg-no-repeat h-100 md:h-64 lg:h-80 w-full`}>
                                 <div className="h-full w-full lg:w-7/12 bg-gradient-to-b from-transparent via-black to-black md:bg-gradient-to-r md:from-black md:via-black md:to-transparent">
                                     <div className="w-full h-full flex flex-col text-white p-10 justify-between items-start">
                                         <div className="uppercase text-slate-300">More To Read</div>
                                         <div className="flex flex-col w-full md:w-7/12">
-                                            <div className="uppercase font-bold pb-4 text-lg md:text-base lg:text-lg">{g.title}</div>
-                                            <div className="leading-loose text-base md:text-sm lg:text-base">{g.desc}</div>
+                                            <div className="uppercase font-bold pb-4 text-lg md:text-base lg:text-lg">{g?.title}</div>
+                                            <div className="leading-loose text-base md:text-sm lg:text-base">{g?.desc}</div>
                                         </div>
-                                        <ReadGeneralButton pages={g.miniComic}/>
+                                        <ReadGeneralButton pages={g?.miniComic}/>
                                     </div>
                                 </div>
                             </div>
