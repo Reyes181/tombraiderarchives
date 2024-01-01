@@ -54,12 +54,6 @@ const SliderContainer = (props: CCProps) => {
         <div className="relative md:max-w-[100%]">
             <div onScroll={handleScroll} ref={slidesContainer} className="w-full py-10 h-fit flex snap-x snap-mandatory overflow-x-auto space-x-2 scroll-smooth before:w-[45vw] before:shrink-0 after:w-[45vw] after:shrink-0 md:before:w-0 md:after:w-0">
                 {props.children}
-                {/* {props.dhcomics.map((comic, i) => (
-                    <DHCard
-                        key={i}
-                        dhcomic={comic}
-                    />
-                ))} */}
             </div>
             <div className={`absolute -top-14 -left-4 h-full items-center hidden ${showLeft && 'md:flex'}`}>
                 <button onClick={moveLeft} role="button" className="drop-shadow-2xl px-4 py-4 rounded-full bg-slate-50 text-indigo-800 group" aria-label="prev"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="3.5" stroke="currentColor" className="w-5 h-5 group-active:-translate-x-2 transition-all duration-200 ease-linear">
