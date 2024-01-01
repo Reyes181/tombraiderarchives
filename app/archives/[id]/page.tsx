@@ -60,7 +60,7 @@ const ArchivePage = async ({ params }: {params: IParams}) => {
 
     return (
         <div className="flex flex-col w-full h-full">
-            
+            {/* <Suspense fallback={<ArchSkeleton/>}>
                 <section className="relative max-w-[2520px] h-fit">
                     <Container>
                         <div style={{backgroundImage: `url(${archive?.banner})`}} className={`bg-cover bg-no-repeat h-80 xl:h-96`}>
@@ -92,7 +92,7 @@ const ArchivePage = async ({ params }: {params: IParams}) => {
                         </div>
                     </Container>
                 </section>
-            
+            </Suspense> */}
             
             <RippedBackground option="2"/>
 
