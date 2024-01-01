@@ -17,7 +17,7 @@ const ArtCard: React.FC<ComicCardProps> = ({
     children
 }) => {
     const [open, setOpen] = useState(false);
-    const slidesLink = [art.illustration];
+    const slidesLink = [art?.illustration];
 
     function setSrc(item, index) {
         var fullLink = {src: item};
@@ -26,7 +26,7 @@ const ArtCard: React.FC<ComicCardProps> = ({
     return(
         <div
         onClick={() => setOpen(true)}
-        key={art.id}
+        key={art?.id}
         className={`slide w-full max-w-[15.5rem] md:max-w-[9.5rem] lg:max-w-[10.5rem] xl:max-w-[12.5rem] h-9/12 flex-shrink-0 snap-center mb-12 flex flex-col relative text-black cursor-pointer`}
     >
         {children}
@@ -42,7 +42,7 @@ const ArtCard: React.FC<ComicCardProps> = ({
         ">
             <div className="text-lg md:text-xs font-medium text-slate-600 flex flex-col">
                 <span className="text-xs">Penciler</span>
-                <span className="font-semibold">{art.artist}</span>
+                <span className="font-semibold">{art?.artist}</span>
             </div>
         </div>
         <Lightbox

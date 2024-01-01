@@ -118,7 +118,7 @@ const ArchivePage = async ({ params }: {params: IParams}) => {
                             <span>Available To Read</span>
                             <hr className="w-1/4 h-0.5 bg-teal-500"/>
                         </div>
-                        <Suspense fallback={<CardsSkeleton/>}>
+                        {/* <Suspense fallback={<CardsSkeleton/>}>
                             <div className="px-4 grid grid-cols-1 md:grid-cols-4 xl:grid-cols-5 gap-4 lg:gap-10 xl:gap-6">
                             {comics?.map((comic, i) => (
                                     <ComicCard
@@ -129,7 +129,7 @@ const ArchivePage = async ({ params }: {params: IParams}) => {
                                     </ComicCard>
                             ))}
                             </div>
-                        </Suspense>
+                        </Suspense> */}
                     </div>
                 </Container>
             </section>

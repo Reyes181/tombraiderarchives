@@ -22,14 +22,14 @@ const RandomComics = async (props: RandomComicsProps) => {
                     random
                     key={i}
                 >
-                    <BlurImage name={comic.name} mainImage={comic.cover} dhcomic/>
+                    <BlurImage name={comic?.name} mainImage={comic?.cover} dhcomic/>
                 </DHCard>
                 :
                 <ComicCard
                     comic={comic}
                     key={i}
                 >
-                    <BlurImage name={comic.name} mainImage={comic.cover} comic/>
+                    <BlurImage name={comic?.name} mainImage={comic?.cover} comic/>
                 </ComicCard>
             ))}
         </div>
