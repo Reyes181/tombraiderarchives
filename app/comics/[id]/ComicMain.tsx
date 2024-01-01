@@ -88,9 +88,7 @@ const ComicMain = (props) => {
                             <span>More From This Volume</span>
                             <hr className="w-1/4 h-0.5 bg-teal-500"/>
                         </div>
-                    <Suspense fallback={<CardsSkeleton/>}>
                         <RandomComics arch={comic?.arch} comic={comic?.id}/>
-                    </Suspense> 
                 </div>
             </Container>
         </div>
