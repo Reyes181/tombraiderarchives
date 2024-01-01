@@ -31,10 +31,10 @@ export async function generateMetadata({
                 description: "The page you are looking for does not exist."
             };
         return {
-            title: `${archive.name} | Top Cow Comics | TR Archives`,
-            description: archive.desc3,
+            title: `${archive?.name} | Top Cow Comics | TR Archives`,
+            description: archive?.desc3,
             alternates: {
-                canonical: `/archives/${archive.id}`
+                canonical: `/archives/${archive?.id}`
             },
             robots: {
                 index: false,
