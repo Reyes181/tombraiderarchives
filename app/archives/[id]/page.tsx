@@ -60,7 +60,7 @@ const ArchivePage = async ({ params }: {params: IParams}) => {
 
     return (
         <div className="flex flex-col w-full h-full">
-            <Suspense fallback={<ArchSkeleton/>}>
+            
                 <section className="relative max-w-[2520px] h-fit">
                     <Container>
                         <div style={{backgroundImage: `url(${archive?.banner})`}} className={`bg-cover bg-no-repeat h-80 xl:h-96`}>
@@ -72,11 +72,6 @@ const ArchivePage = async ({ params }: {params: IParams}) => {
                                     </div>
                                 </div>
                                 <div className="basis-5/12 xl:basis-3/12 overflow-hidden md:flex justify-end h-full hidden">
-                                    {/* <img
-                                        alt={archive?.name}
-                                        src={archive?.icon}
-                                        className="object-contain object-center h-auto w-auto"
-                                    /> */}
                                     <BlurImage name={archive ? archive?.name : ''} mainImage={archive ? archive?.icon : ''} arch/>
                                 </div>
                             </div>
@@ -97,7 +92,7 @@ const ArchivePage = async ({ params }: {params: IParams}) => {
                         </div>
                     </Container>
                 </section>
-            </Suspense>
+            
             
             <RippedBackground option="2"/>
 
@@ -118,7 +113,7 @@ const ArchivePage = async ({ params }: {params: IParams}) => {
                             <span>Available To Read</span>
                             <hr className="w-1/4 h-0.5 bg-teal-500"/>
                         </div>
-                        {/* <Suspense fallback={<CardsSkeleton/>}>
+                        <Suspense fallback={<CardsSkeleton/>}>
                             <div className="px-4 grid grid-cols-1 md:grid-cols-4 xl:grid-cols-5 gap-4 lg:gap-10 xl:gap-6">
                             {comics?.map((comic, i) => (
                                     <ComicCard
@@ -129,7 +124,7 @@ const ArchivePage = async ({ params }: {params: IParams}) => {
                                     </ComicCard>
                             ))}
                             </div>
-                        </Suspense> */}
+                        </Suspense>
                     </div>
                 </Container>
             </section>
