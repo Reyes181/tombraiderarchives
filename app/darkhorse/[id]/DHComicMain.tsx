@@ -56,8 +56,8 @@ const DHComicMain = (props) => {
                                     return Object.keys(tobj).map((keyName, i)=> (
                                         <div key={i} className="basis-6/12 lg:basis-3/12 py-6 flex flex-col">
                                             <span className="uppercase">{keyName}</span>
-                                            {tobj[keyName].map((value) => (
-                                            <span className="font-semibold">
+                                            {tobj[keyName].map((value, i) => (
+                                            <span className="font-semibold" key={i}>
                                                 {value}
                                             </span>
                                             ))}

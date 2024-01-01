@@ -88,7 +88,7 @@ export const companylogos = [
                       text-lg lg:text-2xl 
                       bg-gradient-to-b from-white via-neutral-300 to-neutral-400 bg-clip-text text-transparent
                     ">
-                      Theres only one woman capable of tracking down the world's rarest artifacts.
+                      {`Theres only one woman capable of tracking down the world's rarest artifacts.`}
                     </div>
                     <div className="
                       mt-1 md:mt-5 

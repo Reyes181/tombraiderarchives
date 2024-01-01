@@ -126,7 +126,7 @@ export default function RootLayout({
                 <div className='flex flex-col text-slate-400 text-justify'>
                   <div>Developed by Crystal Dynamics. Tomb Raider, Crystal Dynamics, Square Enix,
                     and their respective logos are trademarks and/or registered trademarks of Square Enix Holding Co., Ltd. Dark Horse Books&#174;
-                    and the Dark Horse logo are registered trademarks of Dark Horse Comics, Inc. Names, characters, places, and incidents featured in this publication either are the product of the author's imagination or are used
+                    and the Dark Horse logo are registered trademarks of Dark Horse Comics, Inc. Names, characters, places, and incidents featured in this publication either are the product of the author&apos;s imagination or are used
                     ficitiously. Any resemblance to actual persons (living or dead), events, institutions, or locales, without satiric intent, is coincidental.
                   </div>
                 </div>

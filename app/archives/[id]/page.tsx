@@ -120,9 +120,10 @@ const ArchivePage = async ({ params }: {params: IParams}) => {
                         </div>
                         <Suspense fallback={<CardsSkeleton/>}>
                             <div className="px-4 grid grid-cols-1 md:grid-cols-4 xl:grid-cols-5 gap-4 lg:gap-10 xl:gap-6">
-                            {comics?.map((comic) => (
+                            {comics?.map((comic, i) => (
                                     <ComicCard
                                         comic={comic}
+                                        key={i}
                                     >
                                         <BlurImage name={comic.name} mainImage={comic.cover} comic/>
                                     </ComicCard>
@@ -154,7 +155,7 @@ const ArchivePage = async ({ params }: {params: IParams}) => {
                         <SliderContainer>
                             <>
                             {arts?.map((art, i) => (
-                                <ArtCard art={art}>
+                                <ArtCard art={art} key={i}>
                                     <BlurImage name={art.artist} mainImage={art.illustration} comic/>
                                 </ArtCard>
                             ))}
@@ -167,7 +168,7 @@ const ArchivePage = async ({ params }: {params: IParams}) => {
                 <Suspense fallback={<div className="h-100 md:h-64 lg:h-80 w-full animate-pulse bg-gray-200"/>}>
                     {
                         gallery?.map((g, i) =>(
-                            <div style={{backgroundImage: `url(${g.cover})`}} className={`bg-center bg-cover bg-no-repeat h-100 md:h-64 lg:h-80 w-full`}>
+                            <div key={i} style={{backgroundImage: `url(${g.cover})`}} className={`bg-center bg-cover bg-no-repeat h-100 md:h-64 lg:h-80 w-full`}>
                                 <div className="h-full w-full lg:w-7/12 bg-gradient-to-b from-transparent via-black to-black md:bg-gradient-to-r md:from-black md:via-black md:to-transparent">
                                     <div className="w-full h-full flex flex-col text-white p-10 justify-between items-start">
                                         <div className="uppercase text-slate-300">More To Read</div>
