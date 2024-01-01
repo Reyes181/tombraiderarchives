@@ -1,6 +1,6 @@
 import { getComicById } from "../../actions/getComics";
 import Banner from "../../components/Banner";
-import Loading from "./loading";
+import CardsSkeleton from "../../utils/CardsSkeleton";
 import ComicMain from "./ComicMain";
 import Await from "./await";
 import { Suspense } from "react";
@@ -53,7 +53,7 @@ const ComicPage = async ({ params }: {params: IParams}) => {
     
     return (
         <>
-            <Suspense fallback={<Loading/>}>
+            <Suspense fallback={<CardsSkeleton/>}>
                 <Await promise={comic}>
                     {(comic) => <ComicMain comicDetails={comic}/>}
                 </Await>
