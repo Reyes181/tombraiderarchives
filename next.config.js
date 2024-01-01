@@ -1,4 +1,15 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {}
+const prod = process.env.NODE_ENV === 'production';
 
-module.exports = nextConfig
+const withPWA = require('next-pwa')({
+    dest: 'public',
+    disable: !prod ? false : true
+});
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+    images: {
+        domains: ['res.cloudinary.com']
+    }
+};
+
+module.exports = withPWA(nextConfig)

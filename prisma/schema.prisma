@@ -1,0 +1,110 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Arches {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  name String
+  shortName String
+  volume String @default(" ")
+  cover String
+  desc1 String
+  desc2 String
+  desc3 String
+  bgcolor String @default(" ")
+  banner String @default(" ")
+  icon  String @default(" ")
+  
+
+  comics Comics[]
+  arts Arts[]
+  gallery Gallery[]
+}
+
+model Comics {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  arch String @db.ObjectId @default(" ")
+  name String
+  author String @default(" ")
+  artist String @default(" ")
+  talents Json[] @default([])
+  pagesTotal Int
+  cover String
+  pages String[]
+  issue String
+  date DateTime @default(now())
+
+  arches Arches @relation(fields: [arch], references: [id])
+}
+
+
+model Arts {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  arch String @db.ObjectId @default(" ")
+  illustration String
+  artist String
+  date DateTime @default(now())
+
+  arches Arches @relation(fields: [arch], references: [id])
+}
+
+model Gallery {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  arch String @db.ObjectId @default(" ")
+  name String
+  cover String
+  miniComic String[]
+  thumbnail String?
+  intro String?
+  title String
+  desc String
+  
+  date DateTime @default(now())
+
+  arches Arches @relation(fields: [arch], references: [id])
+}
+
+model DHArches {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  name String
+  shortName String
+  desc1 String
+  desc2 String
+
+  dhcomics DHComics[]
+}
+
+model DHComics {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  dhArchID String @db.ObjectId @default(" ")
+  name String
+  talents Json[] @default([])
+  pagesTotal Int
+  cover String
+  pages String[]
+  issue String
+  date DateTime @default(now())
+  author String @default(" ")
+  pencil String @default(" ")
+  
+
+  arches DHArches @relation(fields: [dhArchID], references: [id])
+}
+
+model Media {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  name String
+  talents Json[] @default([])
+  pagesTotal Int
+  cover String
+  pages String[]
+  date DateTime @default(now())
+}
