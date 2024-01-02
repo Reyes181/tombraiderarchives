@@ -55,8 +55,8 @@ export async function generateMetadata({
 
 const ArchivePage = async ({ params }: {params: IParams}) => {
     const archive = await getArchiveById(params);
-    const comics = await getComicsById(params);
-    // const arts = await getArtsById(params);
+    // const comics = await getComicsById(params);
+    const arts = await getArtsById(params);
     const gallery = await getGalleryById(params);
 
     return (
@@ -97,7 +97,7 @@ const ArchivePage = async ({ params }: {params: IParams}) => {
             
             <RippedBackground option="2"/>
 
-            <section className="relative max-w-[2520px] h-fit my-5 py-4">
+            {/* <section className="relative max-w-[2520px] h-fit my-5 py-4">
                 <Container>
                     <div className="flex flex-col">
                         <div className="
@@ -118,7 +118,7 @@ const ArchivePage = async ({ params }: {params: IParams}) => {
                         <ArchivesComics comics={comics}/>
                     </div>
                 </Container>
-            </section>
+            </section> */}
             <section>
                 <Container>
                     <div className="flex flex-col">
@@ -137,7 +137,7 @@ const ArchivePage = async ({ params }: {params: IParams}) => {
                             <hr className="w-1/4 h-0.5 bg-teal-500"/>
                         </div>
                     </div>
-                    {/* <Suspense fallback={<CardsSkeleton/>}>
+                    <Suspense fallback={<CardsSkeleton/>}>
                         <SliderContainer>
                             <>
                             {arts?.map((art, i) => (
@@ -147,7 +147,7 @@ const ArchivePage = async ({ params }: {params: IParams}) => {
                             ))}
                             </> 
                         </SliderContainer>
-                    </Suspense> */}
+                    </Suspense>
                 </Container>
             </section>
             <section className="w-full pt-16 pb-28">
