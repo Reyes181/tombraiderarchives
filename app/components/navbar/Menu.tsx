@@ -20,7 +20,7 @@ const Menu = () => {
     });
 
     const installApp = async () => {
-        if (deferredPrompt !== null) {
+        if (deferredPrompt !== null && deferredPrompt !== undefined) {
             deferredPrompt.prompt();
             const { outcome } = await deferredPrompt.userChoice;
             if (outcome === 'accepted') {
