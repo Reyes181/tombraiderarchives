@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Image from 'next/image';
+import Container from './Container';
 
 interface ErrorProps {
     children: React.ReactNode
@@ -16,7 +18,22 @@ class ErrorBoundary extends Component<ErrorProps> {
   render() {
     if (this.state.hasError) {
       // Display an error message or redirect to another page
-      return <h1>Oh no! Something went wrong.</h1>;
+      return (
+        <Container>
+            <div className="h-screen flex flex-col justify-center items-center pb-10">
+                <Image
+                    className="w-auto h-1/6 xl:h-aut mb-4"
+                    src="/images/logo.png"
+                    alt="Logo"
+                    width={540}
+                    height={304}
+                />
+                <div className="flex flex-col text-3xl md:text-4xl font-extrabold uppercase text-zinc-300 tracking-wide text-center">
+                    <div>No!<br/> <span className="text-4xl lg:text-5xl text-black tracking-tight">Something went wrong, please refresh the page.</span></div>
+                </div>
+            </div>
+        </Container>
+      )
     }
     return this.props.children;
   }

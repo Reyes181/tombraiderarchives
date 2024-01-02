@@ -28,7 +28,6 @@ const getImage = async (src: string) => {
   };
 
   export default async function BlurImage(props: BlurProps){
-    console.log(props.mainImage)
     const {base64, img} = await getImage(props.mainImage);
 
     return (
