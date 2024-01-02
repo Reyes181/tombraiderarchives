@@ -64,6 +64,7 @@ export default async function HomeArchives() {
                 flex flex-col sm:flex-row 
                 justify-between
                 py-4
+                max-w-[2520px]
             ">
                 {archives.map((item) => (
 

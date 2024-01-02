@@ -32,8 +32,8 @@ export const companylogos = [
 
   const HomeHero = () => {
     return(
-        <section className="relative max-w-[2520px] mx-auto h-fit">
-        <div className="bg-[url('/images/greenhero.png')] bg-cover h-fit lg:h-4/5">
+        <section className="relative mx-auto h-fit">
+        <div className="bg-[url('/images/greenhero.png')] bg-cover h-fit lg:h-4/5 w-full">
           <div className="h-fit lg:h-full w-full bg-gradient-to-b from-black via-transparent to-black py-6">
             <Container>
               <div className="h-fit lg:h-full flex flex-col md:flex-row items-center gap-2 2xl:w-4/5 w-full m-auto">
