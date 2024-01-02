@@ -34,7 +34,7 @@ const MediaContainer = (props) => {
                 </div>
                 <div className="lg:w-[60%] relative px-4 lg:px-0 grid grid-cols-1 gap-2 my-10 md:my-6 md:grid-cols-3 md:gap-x-3 md:h-64">
                     <Image
-                        className="mx-auto md:mx-0 w-auto h-full md:h-4/6 lg:h-5/6"
+                        className="mx-auto md:mx-0 w-auto h-full md:h-4/6 lg:h-5/6 xl:h-4/6"
                         src="/images/bookCoverA.png"
                         alt="Book Cover"
                         width={296}

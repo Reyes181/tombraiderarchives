@@ -32,7 +32,7 @@ export const companylogos = [
 
   const HomeHero = () => {
     return(
-        <section className="relative mx-auto h-fit">
+        <section className="relative h-fit">
         <div className="bg-[url('/images/greenhero.png')] bg-cover h-fit lg:h-4/5 w-full">
           <div className="h-fit lg:h-full w-full bg-gradient-to-b from-black via-transparent to-black py-6">
             <Container>

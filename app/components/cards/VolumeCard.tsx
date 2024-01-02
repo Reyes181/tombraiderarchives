@@ -19,7 +19,7 @@ const VolumeCard: React.FC<VolumeCardProps> = ({
                         <img
                             src={data.cover}
                             alt={data.name}
-                            className="self-center sm:self-auto w-4/5 sm:w-auto ease-in-out duration-300 group-hover:-translate-y-2"
+                            className="self-center w-4/5 sm:w-auto xl:w-4/5 ease-in-out duration-300 group-hover:-translate-y-2"
                         />
                         
                         <div className="
