@@ -115,7 +115,7 @@ const ArchivePage = async ({ params }: {params: IParams}) => {
                             <hr className="w-1/4 h-0.5 bg-teal-500"/>
                         </div>
                         
-                        <ArchivesComics comics={comics}/>
+                        <ArchivesComics params={params}/>
                     </div>
                 </Container>
             </section>
