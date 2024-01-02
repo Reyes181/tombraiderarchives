@@ -13,7 +13,7 @@ const ArchivesComics = (props) => {
                         comic={comic}
                         key={i}
                     >
-                        <BlurImage name={comic ? comic.name : ''} mainImage={comic ? comic.cover : ''} dhcomic/>
+                        <BlurImage name={comic.name} mainImage={comic.cover} dhcomic/>
                     </ComicCard>
                     
             ))}
