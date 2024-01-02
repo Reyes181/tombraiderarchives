@@ -5,6 +5,7 @@ import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import "yet-another-react-lightbox/styles.css";
 import { useState} from "react";
 import NextJsImage from "../NextJsImage";
+import Image from "next/image";
 
 
 interface ComicCardProps {
@@ -29,7 +30,15 @@ const ArtCard: React.FC<ComicCardProps> = ({
         key={art?.id}
         className={`slide w-full max-w-[15.5rem] md:max-w-[9.5rem] lg:max-w-[10.5rem] xl:max-w-[12.5rem] h-9/12 flex-shrink-0 snap-center mb-12 flex flex-col relative text-black cursor-pointer`}
     >
-        {children}
+        <Image
+            src={art?.illustration}
+            alt={art?.artist}
+            width={500}
+            height={500}
+            className={
+                'cursor-pointer shrink-0 drop-shadow-lg w-auto ease-in-out h-auto md:h-3/4 lg:h-5/6 duration-300 hover:-translate-y-2'
+            }
+        />
         
         <div className="
             mt-5

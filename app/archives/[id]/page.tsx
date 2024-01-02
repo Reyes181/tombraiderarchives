@@ -56,7 +56,7 @@ export async function generateMetadata({
 const ArchivePage = async ({ params }: {params: IParams}) => {
     const archive = await getArchiveById(params);
     // const comics = await getComicsById(params);
-    // const arts = await getArtsById(params);
+    const arts = await getArtsById(params);
     const gallery = await getGalleryById(params);
 
     return (
@@ -119,7 +119,7 @@ const ArchivePage = async ({ params }: {params: IParams}) => {
                     </div>
                 </Container>
             </section>
-            {/* <section>
+            <section>
                 <Container>
                     <div className="flex flex-col">
                         <div className="
@@ -142,14 +142,14 @@ const ArchivePage = async ({ params }: {params: IParams}) => {
                             <>
                             {arts?.map((art, i) => (
                                 <ArtCard art={art} key={i}>
-                                    <BlurImage name={art?.artist} mainImage={art?.illustration} comic/>
+                                    {/* <BlurImage name={art?.artist} mainImage={art?.illustration} comic/> */}
                                 </ArtCard>
                             ))}
                             </> 
                         </SliderContainer>
                     </Suspense>
                 </Container>
-            </section> */}
+            </section>
             <section className="w-full pt-16 pb-28">
                 <Suspense fallback={<div className="h-100 md:h-64 lg:h-80 w-full animate-pulse bg-gray-200"/>}>
                     {
