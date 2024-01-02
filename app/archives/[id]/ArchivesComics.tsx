@@ -15,7 +15,7 @@ const ArchivesComics = async ({ params }: {params: IParams}) => {
     const comics = await getComicsById(params);
     const src = '/images/greyplaceholder.jpg';
 
-    const buffer = await fs.readFile(`../../../public${src}`);
+    const buffer = await fs.readFile(`./public${src}`);
 
     const { base64 } = await getPlaiceholder(buffer);
     return(
