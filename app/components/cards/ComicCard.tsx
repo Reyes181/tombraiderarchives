@@ -15,8 +15,8 @@ const ComicCard: React.FC<ComicCardProps> = ({
     const router = useRouter();
     return(
         <div
-        onClick={() => router.push(`/comics/${comic?.id}`)} 
-        key={comic?.id}
+        onClick={() => router.push(`/comics/${comic.id}`)} 
+        key={comic.id}
         className="mb-12 flex flex-col relative text-black cursor-pointer"
     >
         {children}
@@ -30,10 +30,10 @@ const ComicCard: React.FC<ComicCardProps> = ({
             flex-col
             shrink
         ">
-            <div className="text-xl md:text-xs font-semibold w-fit">{comic?.name}</div>
+            <div className="text-xl md:text-xs font-semibold w-fit">{comic.name}</div>
             <div className="text-lg md:text-xs font-medium text-slate-600 flex flex-col">
-                <span>{comic?.author}</span>
-                <span>{comic?.artist}</span>
+                <span>{comic.author}</span>
+                <span>{comic.artist}</span>
             </div>
         </div>
     </div>

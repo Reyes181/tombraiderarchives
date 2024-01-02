@@ -9,15 +9,16 @@ const ArchivesComics = (props) => {
 <       Suspense fallback={<CardsSkeleton/>}>
             <div className="px-4 grid grid-cols-1 md:grid-cols-4 xl:grid-cols-5 gap-4 lg:gap-10 xl:gap-6">
             {comics.map((comic, i) => (
-                    // <ComicCard
-                    //     comic={comic}
-                    //     key={i}
-                    // >
-                    //     <BlurImage name={comic.name} mainImage={comic.cover} comic/>
-                    // </ComicCard>
-                    <div key={i}>
-                        {comic.name}
-                    </div>
+                    <ComicCard
+                        comic={comic}
+                        key={i}
+                    >
+                        {/* <BlurImage name={comic.name} mainImage={comic.cover} comic/> */}
+                        <div key={i}>
+                            {comic.name}
+                        </div>
+                    </ComicCard>
+                    
             ))}
             </div>
         </Suspense>
