@@ -18,7 +18,7 @@ const ArchivesComics = async ({ params }: {params: IParams}) => {
                         comic={comic}
                         key={i}
                     >
-                        <BlurImage name={comic.name} mainImage={comic.cover} comic/>
+                        <BlurImage name={comic.name} mainImage={comic.cover} dhcomic/>
                     </ComicCard>
                     
             ))}

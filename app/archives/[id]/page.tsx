@@ -55,7 +55,7 @@ export async function generateMetadata({
 
 const ArchivePage = async ({ params }: {params: IParams}) => {
     const archive = await getArchiveById(params);
-    const comics = await getComicsById(params);
+    // const comics = await getComicsById(params);
     // const arts = await getArtsById(params);
     const gallery = await getGalleryById(params);
 
