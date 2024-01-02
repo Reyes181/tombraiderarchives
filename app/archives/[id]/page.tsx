@@ -11,6 +11,7 @@ import CardsSkeleton from "../../utils/CardsSkeleton";
 import SliderContainer from "../../darkhorse/SliderContainer";
 import ArtCard from "../../components/cards/ArtCard";
 import ReadGeneralButton from "../../components/ReadGeneralButton";
+import ArchivesComics from "./ArchivesComics";
 
 interface IParams {
     id?: string
@@ -113,18 +114,8 @@ const ArchivePage = async ({ params }: {params: IParams}) => {
                             <span>Available To Read</span>
                             <hr className="w-1/4 h-0.5 bg-teal-500"/>
                         </div>
-                        <Suspense fallback={<CardsSkeleton/>}>
-                            <div className="px-4 grid grid-cols-1 md:grid-cols-4 xl:grid-cols-5 gap-4 lg:gap-10 xl:gap-6">
-                            {comics !== null && comics.map((comic, i) => (
-                                    <ComicCard
-                                        comic={comic}
-                                        key={i}
-                                    >
-                                        <BlurImage name={comic.name} mainImage={comic.cover} comic/>
-                                    </ComicCard>
-                            ))}
-                            </div>
-                        </Suspense>
+                        
+                        <ArchivesComics comics={comics}/>
                     </div>
                 </Container>
             </section>
