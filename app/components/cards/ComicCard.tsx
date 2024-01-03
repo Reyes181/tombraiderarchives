@@ -17,7 +17,7 @@ const ComicCard: React.FC<ComicCardProps> = ({
         <div
         onClick={() => router.push(`/comics/${comic.id}`)} 
         key={comic.id}
-        className="mb-12 flex flex-col relative text-black cursor-pointer"
+        className="mb-12 mx-auto md:mx-0 flex flex-col relative text-black cursor-pointer"
     >
         {children}
         
