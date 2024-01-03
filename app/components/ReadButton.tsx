@@ -20,7 +20,7 @@ const ReadButton = (props) => {
     }   
 
     const share = usePathname();
-    const base = "http://localhost:3000";
+    const base = "https://www.trarchives";
 
     const links = base + share;
     const copylink = (e) => {
