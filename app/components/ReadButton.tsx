@@ -20,7 +20,7 @@ const ReadButton = (props) => {
     }   
 
     const share = usePathname();
-    const base = "https://www.trarchives";
+    const base = "https://www.trarchives.com";
 
     const links = base + share;
     const copylink = (e) => {
