@@ -90,6 +90,9 @@ export default function RootLayout({
         <link rel="manifest" href="/manifest.json" />
         <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#fffff" />
         <link rel="shortcut icon" href="/favicon.ico" />
+        {process.env.NODE_ENV === "production" && (
+          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1236792988047217 "crossOrigin="anonymous"></script>
+        )}
       </head>
       <body className={univers.className}>
         <ClientOnly>
