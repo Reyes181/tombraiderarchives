@@ -7,6 +7,7 @@ import localFont from 'next/font/local'
 import ToasterProvider from './providers/ToasterProvider';
 import Providers from './Providers';
 import Image from 'next/image';
+import { Analytics } from '@vercel/analytics/react';
 
 
 const univers = localFont({
@@ -152,6 +153,7 @@ export default function RootLayout({
           </div>
           <div className='text-center w-full px-12 text-slate-400'>Site Published By E.R.</div>
         </footer>
+        <Analytics/>
       </body>
     </html>
   )
